@@ -57,3 +57,8 @@ class ExpenseManager:
             summary[category] = summary.get(category, 0) + expense['amount']
         
         return {k: round(v, 2) for k, v in summary.items()}
+    
+    def _generate_id(self) -> int:
+        """Generate unique ID for new expense"""
+        expenses = self.get_all_expenses()
+        return max([exp.get('id', 0) for exp in expenses], default=0) + 1
