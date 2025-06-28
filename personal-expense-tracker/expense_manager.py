@@ -46,3 +46,14 @@ class ExpenseManager:
         if expenses is None:
             expenses = self.get_all_expenses()
         return round(sum(exp['amount'] for exp in expenses), 2)
+    
+    def get_category_summary(self) -> Dict[str, float]:
+        """Get spending summary by category"""
+        expenses = self.get_all_expenses()
+        summary = {}
+        
+        for expense in expenses:
+            category = expense['category']
+            summary[category] = summary.get(category, 0) + expense['amount']
+        
+        return {k: round(v, 2) for k, v in summary.items()}
