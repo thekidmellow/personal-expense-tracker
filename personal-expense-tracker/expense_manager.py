@@ -31,3 +31,7 @@ class ExpenseManager:
         expenses = self.data_handler.load_expenses()
         expenses.append(expense)
         return self.data_handler.save_expenses(expenses)
+    
+    def get_all_expenses(self) -> List[Dict[str, Any]]:
+        """Get all expenses"""
+        return self.data_handler.load_expenses()
