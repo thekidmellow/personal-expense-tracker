@@ -23,4 +23,14 @@ class DataHandler:
             with open(self.filename, 'r') as file:
                 return json.load(file)
         except (FileNotFoundError, json.JSONDecodeError):
-            return []    
+            return []
+
+    def save_expenses(self, expenses: List[Dict[str, Any]]) -> bool:
+        """Save expenses to the JSON file"""
+        try:
+            with open(self.filename, 'w') as file:
+                json.dump(expenses, file, indent=2, default=str)
+            return True
+        except Exception as e:
+            print(f"Error saving data: {e}")
+            return False
