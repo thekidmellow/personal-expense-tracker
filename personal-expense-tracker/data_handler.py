@@ -16,3 +16,11 @@ class DataHandler:
         if not os.path.exists(self.filename):
             with open(self.filename, 'w') as file:
                 json.dump([], file)
+
+    def load_expenses(self) -> List[Dict[str, Any]]:
+        """Load all expenses from the JSON file"""
+        try:
+            with open(self.filename, 'r') as file:
+                return json.load(file)
+        except (FileNotFoundError, json.JSONDecodeError):
+            return []    
