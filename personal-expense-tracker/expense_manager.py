@@ -35,3 +35,8 @@ class ExpenseManager:
     def get_all_expenses(self) -> List[Dict[str, Any]]:
         """Get all expenses"""
         return self.data_handler.load_expenses()
+    
+    def get_expenses_by_category(self, category: str) -> List[Dict[str, Any]]:
+        """Get expenses filtered by category"""
+        expenses = self.get_all_expenses()
+        return [exp for exp in expenses if exp['category'].lower() == category.lower()]
