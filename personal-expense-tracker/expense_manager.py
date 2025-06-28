@@ -40,3 +40,9 @@ class ExpenseManager:
         """Get expenses filtered by category"""
         expenses = self.get_all_expenses()
         return [exp for exp in expenses if exp['category'].lower() == category.lower()]
+    
+    def calculate_total(self, expenses: Optional[List[Dict[str, Any]]] = None) -> float:
+        """Calculate total amount of expenses"""
+        if expenses is None:
+            expenses = self.get_all_expenses()
+        return round(sum(exp['amount'] for exp in expenses), 2)
