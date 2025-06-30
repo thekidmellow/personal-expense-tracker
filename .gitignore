@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+
+# IDE/project files
+.vscode/
+.idea/
+
+# macOS system files
+.DS_Store
+
+# Ignore Python cache folders
+*.egg-info/
+dist/
+build/
+
+# Ignore SQLite database files (optional)
+*.sqlite3
+
+# Ignore your local config files (optional)
+config.ini
