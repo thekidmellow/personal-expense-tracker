@@ -165,3 +165,16 @@ class ExpenseTrackerApp:
 
         print("-" * 35)
         print(f"{'TOTAL:':<15} ${total:.2f} 100.0%")
+
+    def view_total_spending(self) -> None:
+        """Display total spending"""
+        total = self.expense_manager.calculate_total()
+        expense_count = len(self.expense_manager.get_all_expenses())
+
+        print("\n--- Total Spending ---")
+        print(f"Total Expenses: {expense_count}")
+        print(f"Total Amount: ${total:.2f}")
+
+        if expense_count > 0:
+            average = total / expense_count
+            print(f"Average per Expense: ${average:.2f}")
