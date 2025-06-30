@@ -107,3 +107,42 @@ class ExpenseTrackerApp:
         total = self.expense_manager.calculate_total(expenses)
         print("-" * 70)
         print(f"{'TOTAL:':<41} ${total:.2f}")
+
+    def view_expenses_by_category(self) -> None:
+        """Display expenses filtered by category"""
+        print("\n--- View by Category ---")
+
+        categories = self.expense_manager.get_categories()
+        print("\nAvailable categories:")
+        for i, category in enumerate(categories, 1):
+            print(f"{i}. {category}")
+
+        try:
+            choice = int(input(f"Choose category (1-{len(categories)}): "))
+            if not (1 <= choice <= len(categories)):
+                print("Invalid choice!")
+                return
+
+            selected_category = categories[choice - 1]
+            expenses = self.expense_manager.get_expenses_by_category(selected_category)
+
+            if not expenses:
+                print(f"No expenses found for category: {selected_category}")
+                return
+
+            print(f"\n--- {selected_category} Expenses ---")
+            print(f"{'Date':<12} {'Amount':<10} {'Description'}")
+            print("-" * 50)
+
+            for expense in expenses:
+                date_str = expense['date'][:10]
+                print(f"{date_str:<12} ${expense['amount']:<9.2f} {expense['description']}")
+
+            total = self.expense_manager.calculate_total(expenses)
+            print("-" * 50)
+            print(f"Total for {selected_category}: ${total:.2f}")
+
+        except ValueError:
+            print("Please enter a valid number!")
+
+            
