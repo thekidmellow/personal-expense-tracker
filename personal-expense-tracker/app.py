@@ -11,3 +11,12 @@ def index():
     expenses = manager.get_all_expenses()
     total = manager.calculate_total(expenses)
     return render_template('index.html', expenses=expenses, total=total)
+
+
+@app.route('/add', methods=['POST'])
+def add_expense():
+    amount = float(request.form['amount'])
+    category = request.form['category']
+    description = request.form['description']
+    manager.add_expense(amount, category, description)
+    return redirect(url_for('index'))
