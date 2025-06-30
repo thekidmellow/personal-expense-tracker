@@ -10,3 +10,12 @@
     </ul>
 
     <h2>Total: ${{ "%.2f"|format(total) }}</h2>
+
+    <form method="POST" action="{{ url_for('add_expense') }}">
+        <input name="amount" placeholder="Amount" type="number" step="0.01" required>
+        <input name="category" placeholder="Category" required>
+        <input name="description" placeholder="Description" required>
+        <button type="submit">Add</button>
+    </form>
+    </body>
+    </html>
