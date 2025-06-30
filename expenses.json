@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "id": 1,
+    "amount": 5.0,
+    "category": "Food",
+    "description": "food stuff",
+    "date": "2025-06-30T23:28:50.920555"
+  }
+]

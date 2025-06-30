@@ -1,6 +1,6 @@
 from datetime import datetime
 from typing import List, Dict, Any, Optional
-from .data_handler import DataHandler
+from personal_expense_tracker.data_handler import DataHandler
 
 
 class ExpenseManager:

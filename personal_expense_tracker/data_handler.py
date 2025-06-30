@@ -8,9 +8,7 @@ class DataHandler:
     """Handles all file operations for expense data"""
 
     def __init__(self, filename: str = "expenses.json"):
-        # This ensures the file is stored in the root directory
-        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        self.filename = os.path.join(base_dir, filename)
+        self.filename = filename
         self.ensure_file_exists()
 
     def ensure_file_exists(self) -> None:
