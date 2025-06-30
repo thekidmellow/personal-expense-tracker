@@ -20,3 +20,9 @@ def add_expense():
     description = request.form['description']
     manager.add_expense(amount, category, description)
     return redirect(url_for('index'))
+
+
+@app.route('/summary')
+def summary():
+    summary = manager.get_category_summary()
+    return render_template('summary.html', summary=summary)
