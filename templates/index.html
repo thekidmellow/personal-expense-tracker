@@ -8,3 +8,5 @@
         <li>${{ "%.2f"|format(exp.amount) }} - {{ exp.category }} - {{ exp.description }}</li>
         {% endfor %}
     </ul>
+
+    <h2>Total: ${{ "%.2f"|format(total) }}</h2>
