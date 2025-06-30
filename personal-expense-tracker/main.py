@@ -145,4 +145,23 @@ class ExpenseTrackerApp:
         except ValueError:
             print("Please enter a valid number!")
 
-            
+    def view_spending_summary(self) -> None:
+        """Display spending summary by category"""
+        print("\n--- Spending Summary ---")
+        summary = self.expense_manager.get_category_summary()
+
+        if not summary:
+            print("No expenses to summarize.")
+            return
+
+        print(f"\n{'Category':<15} {'Amount':<10} {'Percentage'}")
+        print("-" * 35)
+
+        total = sum(summary.values())
+
+        for category, amount in sorted(summary.items(), key=lambda x: x[1], reverse=True):
+            percentage = (amount / total * 100) if total > 0 else 0
+            print(f"{category:<15} ${amount:<9.2f} {percentage:.1f}%")
+
+        print("-" * 35)
+        print(f"{'TOTAL:':<15} ${total:.2f} 100.0%")
