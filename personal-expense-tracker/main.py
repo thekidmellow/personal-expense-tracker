@@ -86,3 +86,24 @@ class ExpenseTrackerApp:
             print("Error: Please enter a valid amount!")
         except Exception as e:
             print(f"Error: {e}")
+
+    def view_all_expenses(self) -> None:
+        """Display all expenses"""
+        print("\n--- All Expenses ---")
+        expenses = self.expense_manager.get_all_expenses()
+
+        if not expenses:
+            print("No expenses found.")
+            return
+
+        print(f"\n{'ID':<4} {'Date':<12} {'Category':<15} {'Amount':<10} {'Description'}")
+        print("-" * 70)
+
+        for expense in expenses:
+            date_str = expense['date'][:10]  # Get just the date part
+            print(f"{expense['id']:<4} {date_str:<12} {expense['category']:<15} "
+                f"${expense['amount']:<9.2f} {expense['description']}")
+
+        total = self.expense_manager.calculate_total(expenses)
+        print("-" * 70)
+        print(f"{'TOTAL:':<41} ${total:.2f}")
