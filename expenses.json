@@ -1,16 +1,1 @@
-[
-  {
-    "id": 1,
-    "amount": 100.0,
-    "category": "Shopping",
-    "description": "buy food stuff",
-    "date": "2025-06-30T12:46:11.395492"
-  },
-  {
-    "id": 2,
-    "amount": 20.0,
-    "category": "Transportation",
-    "description": "bus fares",
-    "date": "2025-06-30T12:46:47.345901"
-  }
-]
+[]
