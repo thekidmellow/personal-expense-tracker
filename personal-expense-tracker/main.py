@@ -15,25 +15,74 @@ class ExpenseTrackerApp:
     def __init__(self):
         self.expense_manager = ExpenseManager()
 
+    def display_menu(self) -> None:
+        """Display the main menu"""
+        print("\n" + "="*50)
+        print("       PERSONAL EXPENSE TRACKER")
+        print("="*50)
+        print("1. Add New Expense")
+        print("2. View All Expenses")
+        print("3. View Expenses by Category")
+        print("4. View Spending Summary")
+        print("5. View Total Spending")
+        print("6. Exit")
+        print("-"*50)
 
-def display_menu(self) -> None:
-    """Display the main menu"""
-    print("\n" + "="*50)
-    print("       PERSONAL EXPENSE TRACKER")
-    print("="*50)
-    print("1. Add New Expense")
-    print("2. View All Expenses")
-    print("3. View Expenses by Category")
-    print("4. View Spending Summary")
-    print("5. View Total Spending")
-    print("6. Exit")
-    print("-"*50)
+    def get_user_choice(self) -> str:
+        """Get and validate user menu choice"""
+        while True:
+            choice = input("Enter your choice (1-6): ").strip()
+            if choice in ['1', '2', '3', '4', '5', '6']:
+                return choice
+            print("Invalid choice. Please enter a number between 1 and 6.")
 
+    def add_expense(self) -> None:
+        """Handle adding a new expense"""
+        print("\n--- Add New Expense ---")
 
-def get_user_choice(self) -> str:
-    """Get and validate user menu choice"""
-    while True:
-        choice = input("Enter your choice (1-6): ").strip()
-        if choice in ['1', '2', '3', '4', '5', '6']:
-            return choice
-        print("Invalid choice. Please enter a number between 1 and 6.")
+        try:
+            # Get amount
+            amount_str = input("Enter amount ($): ").strip()
+            amount = float(amount_str)
+
+            if amount <= 0:
+                print("Error: Amount must be positive!")
+                return
+
+            # Display and get category
+            categories = self.expense_manager.get_categories()
+            print("\nAvailable categories:")
+            for i, category in enumerate(categories, 1):
+                print(f"{i}. {category}")
+
+            while True:
+                try:
+                    cat_choice = int(input(f"Choose category (1-{len(categories)}): "))
+                    if 1 <= cat_choice <= len(categories):
+                        category = categories[cat_choice - 1]
+                        break
+                    else:
+                        print(f"Please enter a number between 1 and {len(categories)}")
+                except ValueError:
+                    print("Please enter a valid number")
+
+            # Get description
+            description = input("Enter description: ").strip()
+            if not description:
+                description = "No description"
+
+            # Add the expense
+            success = self.expense_manager.add_expense(amount, category, description)
+
+            if success:
+                print(f"\n✓ Expense added successfully!")
+                print(f"  Amount: ${amount:.2f}")
+                print(f"  Category: {category}")
+                print(f"  Description: {description}")
+            else:
+                print("✗ Failed to save expense. Please try again.")
+
+        except ValueError:
+            print("Error: Please enter a valid amount!")
+        except Exception as e:
+            print(f"Error: {e}")
