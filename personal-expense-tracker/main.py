@@ -211,3 +211,13 @@ class ExpenseTrackerApp:
             except Exception as e:
                 print(f"\nAn error occurred: {e}")
                 print("Please try again.")
+
+
+def main():
+    """Entry point of the application"""
+    app = ExpenseTrackerApp()
+    app.run()
+
+
+if __name__ == "__main__":
+    main()
