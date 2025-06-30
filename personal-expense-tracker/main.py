@@ -14,3 +14,7 @@ class ExpenseTrackerApp:
 
     def __init__(self):
         self.expense_manager = ExpenseManager()
+
+
+def display_menu(self) -> None:
+        """Display the main menu"""
