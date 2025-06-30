@@ -178,3 +178,36 @@ class ExpenseTrackerApp:
         if expense_count > 0:
             average = total / expense_count
             print(f"Average per Expense: ${average:.2f}")
+
+    def run(self) -> None:
+        """Main application loop"""
+        print("Welcome to Personal Expense Tracker!")
+
+        while True:
+            try:
+                self.display_menu()
+                choice = self.get_user_choice()
+
+                if choice == '1':
+                    self.add_expense()
+                elif choice == '2':
+                    self.view_all_expenses()
+                elif choice == '3':
+                    self.view_expenses_by_category()
+                elif choice == '4':
+                    self.view_spending_summary()
+                elif choice == '5':
+                    self.view_total_spending()
+                elif choice == '6':
+                    print("\nThank you for using Personal Expense Tracker!")
+                    print("Goodbye! 👋")
+                    break
+
+                input("\nPress Enter to continue...")
+
+            except KeyboardInterrupt:
+                print("\n\nExiting application...")
+                break
+            except Exception as e:
+                print(f"\nAn error occurred: {e}")
+                print("Please try again.")
