@@ -6,7 +6,7 @@ A command-line application to manage personal expenses
 
 import sys
 from typing import Optional
-from expense_manager import ExpenseManager
+from .expense_manager import ExpenseManager
 
 
 class ExpenseTrackerApp:
