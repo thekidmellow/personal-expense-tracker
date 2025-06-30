@@ -26,3 +26,7 @@ def add_expense():
 def summary():
     summary = manager.get_category_summary()
     return render_template('summary.html', summary=summary)
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
