@@ -1,32 +1,37 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Personal Expense Tracker 💰
 
-Welcome,
+A command-line Python application to track your daily expenses efficiently, with features to categorize spending, generate summaries, and store everything locally in JSON.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **May 14, 2024**
+## Purpose
 
-## Reminders
+This application helps users track their daily expenses by providing an easy-to-use command-line interface to:
+- Add new expenses with categories and descriptions
+- View and filter expenses
+- Generate spending reports and summaries
+- Store data persistently
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+## Value to Users
 
-## Creating the Heroku app
+- **Simple Expense Management**: Quick and easy way to log daily expenses
+- **Category Organization**: Organize expenses into predefined categories
+- **Spending Insights**: View summaries and totals to understand spending patterns
+- **Data Persistence**: All data is saved locally and persists between sessions
+- **No Internet Required**: Works completely offline
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## Features ✨
 
-1. `heroku/python`
-2. `heroku/nodejs`
+- 📝 Add expenses with categories, amounts, and descriptions
+- 📊 View all expenses in a clean tabular format
+- 🔍 Filter expenses by category or date range
+- 📈 Generate spending summaries and category breakdowns
+- 💾 Persistent data storage (JSON format)
+- 🏷️ Built-in expense categories:
+  - Food 🍔
+  - Transportation 🚗
+  - Entertainment 🎬
+  - Shopping 🛍️
+  - Bills 💳
+  - Healthcare 🏥
+  - Education 📚
+  - Other ✨
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
