@@ -13,13 +13,22 @@ class ExpenseManager:
             "Bills", "Healthcare", "Education", "Other"
         ]
 
-    def add_expense(self, amount: float, category: str, description: str) -> bool:
+    def add_expense(
+        self,
+        amount: float,
+        category: str,
+        description: str
+    ) -> bool:
+
         """Add a new expense"""
         if amount <= 0:
             raise ValueError("Amount must be positive")
 
         if category not in self.categories:
-            raise ValueError(f"Invalid category. Choose from: {', '.join(self.categories)}")
+            raise ValueError(
+                "Invalid category. Choose from: "
+                f"{', '.join(self.categories)}"
+            )
 
         expense = {
             "id": self._generate_id(),
@@ -40,9 +49,19 @@ class ExpenseManager:
     def get_expenses_by_category(self, category: str) -> List[Dict[str, Any]]:
         """Get expenses filtered by category"""
         expenses = self.get_all_expenses()
-        return [exp for exp in expenses if exp['category'].lower() == category.lower()]
+        return [
+            exp
+            for exp in expenses
+            if exp['category'].lower() == category.lower()
+        ]
 
-    def calculate_total(self, expenses: Optional[List[Dict[str, Any]]] = None) -> float:
+    from typing import Optional, List, Dict, Any
+
+    def calculate_total(
+        self,
+        expenses: Optional[List[Dict[str, Any]]] = None
+    ) -> float:
+
         """Calculate total amount of expenses"""
         if expenses is None:
             expenses = self.get_all_expenses()

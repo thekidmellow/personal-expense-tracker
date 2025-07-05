@@ -57,12 +57,22 @@ class ExpenseTrackerApp:
 
             while True:
                 try:
-                    cat_choice = int(input(f"Choose category (1-{len(categories)}): "))
+                    cat_choice = int(
+                        input(
+                            f"Choose category (1-"
+                            f"{len(categories)}): "
+                        )
+                    )
+
                     if 1 <= cat_choice <= len(categories):
                         category = categories[cat_choice - 1]
                         break
                     else:
-                        print(f"Please enter a number between 1 and {len(categories)}")
+                        print(
+                            "Please enter a number between 1 and "
+                            f"{len(categories)}"
+                        )
+
                 except ValueError:
                     print("Please enter a valid number")
 
@@ -70,14 +80,15 @@ class ExpenseTrackerApp:
             description = input("Enter description: ").strip()
             if not description:
                 description = "No description"
-
-            # Add the expense
-            success = self.expense_manager.add_expense(amount, category, description)
+            # Add the expenses
+                success = self.expense_manager.add_expense(
+                    amount, category, description
+                )
 
             if success:
-                print(f"\n✓ Expense added successfully!")
-                print(f"  Amount: ${amount:.2f}")
-                print(f"  Category: {category}")
+                print("\n✓ Expense added successfully!")
+                print(f"  Amount:    ${amount:.2f}")
+                print(f"  Category:  {category}")
                 print(f"  Description: {description}")
             else:
                 print("✗ Failed to save expense. Please try again.")
@@ -96,13 +107,25 @@ class ExpenseTrackerApp:
             print("No expenses found.")
             return
 
-        print(f"\n{'ID':<4} {'Date':<12} {'Category':<15} {'Amount':<10} {'Description'}")
+        print(
+            f"\n{'ID':<4} "
+            f"{'Date':<12} "
+            f"{'Category':<15} "
+            f"{'Amount':<10} "
+            f"{'Description'}"
+        )
+
         print("-" * 70)
 
         for expense in expenses:
             date_str = expense['date'][:10]  # Get just the date part
-            print(f"{expense['id']:<4} {date_str:<12} {expense['category']:<15} "
-                f"${expense['amount']:<9.2f} {expense['description']}")
+            print(
+                f"{expense['id']:<4} "
+                f"{date_str:<12} "
+                f"{expense['category']:<15} "
+                f"${expense['amount']:<9.2f} "
+                f"{expense['description']}"
+            )
 
         total = self.expense_manager.calculate_total(expenses)
         print("-" * 70)
@@ -124,7 +147,9 @@ class ExpenseTrackerApp:
                 return
 
             selected_category = categories[choice - 1]
-            expenses = self.expense_manager.get_expenses_by_category(selected_category)
+            expenses = self.expense_manager.get_expenses_by_category(
+                selected_category
+            )
 
             if not expenses:
                 print(f"No expenses found for category: {selected_category}")
@@ -136,7 +161,11 @@ class ExpenseTrackerApp:
 
             for expense in expenses:
                 date_str = expense['date'][:10]
-                print(f"{date_str:<12} ${expense['amount']:<9.2f} {expense['description']}")
+                print(
+                    f"{date_str:<12} "
+                    f"${expense['amount']:<9.2f} "
+                    f"{expense['description']}"
+                )
 
             total = self.expense_manager.calculate_total(expenses)
             print("-" * 50)
@@ -159,7 +188,9 @@ class ExpenseTrackerApp:
 
         total = sum(summary.values())
 
-        for category, amount in sorted(summary.items(), key=lambda x: x[1], reverse=True):
+        for category, amount in sorted(
+            summary.items(), key=lambda x: x[1], reverse=True
+        ):
             percentage = (amount / total * 100) if total > 0 else 0
             print(f"{category:<15} ${amount:<9.2f} {percentage:.1f}%")
 

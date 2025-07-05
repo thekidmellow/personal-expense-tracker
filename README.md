@@ -1,10 +1,13 @@
 # Personal Expense Tracker 💰
+
 A command-line Python application to track your daily expenses efficiently, with features to categorize spending, generate summaries, and store everything locally in JSON.
 
 <br>
 
 ## **Purpose**
+
 This application helps users track their daily expenses by providing an easy-to-use command-line interface to:
+
 - Add new expenses with categories and descriptions
 - View and filter expenses
 - Generate spending reports and summaries
@@ -13,6 +16,7 @@ This application helps users track their daily expenses by providing an easy-to-
 <br>
 
 ## **Value to Users**
+
 - **Simple Expense Management**: Quick and easy way to log daily expenses
 - **Category Organization**: Organize expenses into predefined categories
 - **Spending Insights**: View summaries and totals to understand spending patterns
@@ -22,6 +26,7 @@ This application helps users track their daily expenses by providing an easy-to-
 <br>
 
 ## **Features** ✨
+
 - 📝 Add expenses with categories, amounts, and descriptions
 - 📊 View all expenses in a clean tabular format
 - 🔍 Filter expenses by category or date range
@@ -40,6 +45,7 @@ This application helps users track their daily expenses by providing an easy-to-
 <br>
 
 ## **Project Structure** 📁
+
 personal-expense-tracker/
 
 ├── run.py # Main application entry point
@@ -69,14 +75,17 @@ personal-expense-tracker/
 The application follows a **3-layer architecture**:
 
 #### 1. User Interface (CLI)
+
 &rightarrow; Handles input/output via command line  
 &rightarrow; Displays menus and collects user choices
 
 #### 2. Application Logic
+
 &rightarrow; Processes commands and validates data  
 &rightarrow; Performs calculations and generates reports
 
 #### 3. Data Storage
+
 &rightarrow; Manages reading/writing to `expenses.json`
 
 <br>
@@ -92,9 +101,10 @@ The application follows a **3-layer architecture**:
 ![Menu system](/img/flowchart_2.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;∘ **Paths:**
-  1. **Add Expense**: Collects amount, category, description  
-  2. **View Expenses**: Shows table/list views  
-  3. **Reports**: Generates summaries/totals
+
+1. **Add Expense**: Collects amount, category, description
+2. **View Expenses**: Shows table/list views
+3. **Reports**: Generates summaries/totals
 
 - **Input Validation**
   - Rejects invalid amounts (negative/zero values)
@@ -109,17 +119,20 @@ The application follows a **3-layer architecture**:
 ![Core functions](/img/flowchart_3.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;∘ **Validation:**
-  - Checks amount > 0
-  - Verifies category exists
+
+- Checks amount > 0
+- Verifies category exists
 
 &nbsp;&nbsp;&nbsp;&nbsp;∘ **Calculations:**
-  - Sums totals
-  - Computes category percentages
-  - Averages spending
+
+- Sums totals
+- Computes category percentages
+- Averages spending
 
 &nbsp;&nbsp;&nbsp;&nbsp;∘ **Filtering:**
-  - Filters by date/category
-  - Sorts results
+
+- Filters by date/category
+- Sorts results
 
 <br>
 
@@ -132,6 +145,7 @@ The application follows a **3-layer architecture**:
 &nbsp;&nbsp;&nbsp;&nbsp;∘ **Auto-Creation:** Makes expenses.json if missing
 
 &nbsp;&nbsp;&nbsp;&nbsp;∘ **Error Handling:**
+
 - Recovers from corrupt files
 - Handles permission errors
 
@@ -145,20 +159,22 @@ The application follows a **3-layer architecture**:
 
 1. User selects "Add Expense"
 2. CLI prompts for:
+
    - Amount (validated as positive number)
    - Category (selected from numbered list)
    - Description (optional)
 
-3. *ExpenseManager* creates expense object with:
+3. _ExpenseManager_ creates expense object with:
 
 ![Expense manager](/img/flowchart_5.png)
 
-4. *DataHandler* appends to *expenses.json*
+4. _DataHandler_ appends to _expenses.json_
 
 **Viewing Expenses**
 
 1. User selects "View All"
 2. System:
+
    - Loads data from JSON
    - Formats as table:
 
@@ -184,11 +200,11 @@ The application follows a **3-layer architecture**:
 
 - **Common Scenarios:**
 
-| Error Type  | Handling    |
-| ----------- | ----------- |
-| Invalid Amount | Retry prompt |
+| Error Type      | Handling        |
+| --------------- | --------------- |
+| Invalid Amount  | Retry prompt    |
 | File Corruption | Auto-reset JSON |
-| Missing Data | Default values |
+| Missing Data    | Default values  |
 
 - **Recovery Flow:**
 
@@ -202,9 +218,9 @@ The application follows a **3-layer architecture**:
 
 **Scenario:** User adds a $20 "Transport" expense
 
-1. *main.py* → Collects input
-2. *ExpenseManager* → Validates amount/category
-3. *DataHandler* → Saves to JSON:
+1. _main.py_ → Collects input
+2. _ExpenseManager_ → Validates amount/category
+3. _DataHandler_ → Saves to JSON:
 
 ![Scenario](/img/flowchart_9.png)
 
@@ -251,6 +267,7 @@ The application follows a **3-layer architecture**:
 <br>
 
 ## **Technical Details** 🧩
+
 - Language: Python 3.9+
 - Data Storage: JSON file format (expenses.json)
 - Architecture: Modular design with separation of concerns
@@ -259,6 +276,7 @@ The application follows a **3-layer architecture**:
 <br>
 
 ## **Development & Best Practices** 📝
+
 - Follows PEP 8 code formatting
 - Uses type hints for better code documentation
 - Modular design with clear separation of concerns
@@ -268,6 +286,7 @@ The application follows a **3-layer architecture**:
 <br>
 
 ## **Data Architecture** 🗂️
+
 - **main.py:** App interface, user menu, input/output
 - **expense_manager.py:** Business logic, data validation, calculations
 - **data_handler.py:** File operations, JSON handling, error management
@@ -276,6 +295,7 @@ The application follows a **3-layer architecture**:
 <br>
 
 ## **Error Handling Strategy** 🛡️
+
 - **Input Validation:** Ensures valid amounts, categories, and menu choices
 - **File Operations:** Handles missing/corrupt files gracefully
 - **System Errors:** Graceful exit on keyboard interrupt or unexpected exceptions
@@ -283,13 +303,15 @@ The application follows a **3-layer architecture**:
 <br>
 
 ## **Development Workflow** 🧑‍💻
+
 1. **Local Development:** Setup, code, test, validate
 2. **Version Control:** Git for tracking changes, GitHub for remote backup
 3. **Deployment:** Heroku for cloud execution
 
 <br>
 
-## **Learning Outcomes** 📚 
+## **Learning Outcomes** 📚
+
 - Implements algorithms for data management and calculations
 - Combines file handling, data processing, and user interface
 - Uses functions, classes, loops, conditionals, lists, and dictionaries
@@ -303,6 +325,7 @@ The application follows a **3-layer architecture**:
 <br>
 
 ## **License** 📢
+
 This project is for educational purposes.
 
 <br>
@@ -310,15 +333,3 @@ This project is for educational purposes.
 ## **Acknowledgement**
 
 This is a Python-based command-line project optimized for desktop environments. While it may work on mobile terminals, it is best experienced on a PC or laptop.
-
-
-
-
-
-
-
-
-
-
-
-
