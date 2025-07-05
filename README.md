@@ -60,7 +60,7 @@ personal-expense-tracker/
 
 ## **Application Flowchart** 📈
 
-![Application Flowchart](/personal-expense-tracker/flowchart_1.png)
+![Application Flowchart](/img/flowchart_1.png)
 
 <br>
 
