@@ -1,15 +1,9 @@
 # Personal Expense Tracker 💰
-
-<br>
-
 A command-line Python application to track your daily expenses efficiently, with features to categorize spending, generate summaries, and store everything locally in JSON.
 
 <br>
 
 ## **Purpose**
-
-<br>
-
 This application helps users track their daily expenses by providing an easy-to-use command-line interface to:
 - Add new expenses with categories and descriptions
 - View and filter expenses
@@ -19,9 +13,6 @@ This application helps users track their daily expenses by providing an easy-to-
 <br>
 
 ## **Value to Users**
-
-<br>
-
 - **Simple Expense Management**: Quick and easy way to log daily expenses
 - **Category Organization**: Organize expenses into predefined categories
 - **Spending Insights**: View summaries and totals to understand spending patterns
@@ -31,9 +22,6 @@ This application helps users track their daily expenses by providing an easy-to-
 <br>
 
 ## **Features** ✨
-
-<br>
-
 - 📝 Add expenses with categories, amounts, and descriptions
 - 📊 View all expenses in a clean tabular format
 - 🔍 Filter expenses by category or date range
@@ -52,9 +40,6 @@ This application helps users track their daily expenses by providing an easy-to-
 <br>
 
 ## **Project Structure** 📁
-
-<br>
-
 personal-expense-tracker/
 
 ├── run.py # Main application entry point
@@ -75,15 +60,11 @@ personal-expense-tracker/
 
 ## **Application Flowchart** 📈
 
-<br>
-
 ![Application Flowchart](../personal-expense-tracker/flowchart_1.png)
 
 <br>
 
 ## 1. System Flow
-
-<br>
 
 The application follows a **3-layer architecture**:
 
@@ -108,7 +89,7 @@ The application follows a **3-layer architecture**:
 
 - Menu System
 
-<img src="../personal-expense-tracker/flowchart_2.png" alt="Application Flowchart 2" width="600"/>
+![Menu system](../personal-expense-tracker/flowchart_2.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;∘ **Paths:**
   1. **Add Expense**: Collects amount, category, description  
@@ -125,7 +106,7 @@ The application follows a **3-layer architecture**:
 
 - **Core Functions:**
 
-<img src="../personal-expense-tracker/flowchart_3.png" alt="Application Flowchart 3" width="600"/>
+![Core functions](../personal-expense-tracker/flowchart_3.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;∘ **Validation:**
   - Checks amount > 0
@@ -146,7 +127,7 @@ The application follows a **3-layer architecture**:
 
 - **File Operations:**
 
-<img src="../personal-expense-tracker/flowchart_4.png" alt="Application Flowchart 3" width="600"/>
+![File operations](../personal-expense-tracker/flowchart_4.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;∘ **Auto-Creation:** Makes expenses.json if missing
 
@@ -170,7 +151,7 @@ The application follows a **3-layer architecture**:
 
 3. *ExpenseManager* creates expense object with:
 
-<img src="../personal-expense-tracker/flowchart_5.png" alt="Application Flowchart 3" width="600"/>
+![Expense manager](../personal-expense-tracker/flowchart_5.png)
 
 4. *DataHandler* appends to *expenses.json*
 
@@ -181,7 +162,7 @@ The application follows a **3-layer architecture**:
    - Loads data from JSON
    - Formats as table:
 
-   <img src="../personal-expense-tracker/flowchart_6.png" alt="Application Flowchart 3" width="600"/>
+   ![Viewing expenses](../personal-expense-tracker/flowchart_6.png)
 
    &nbsp;&nbsp;&nbsp;&nbsp;∘ Displays total at bottom
 
@@ -193,7 +174,7 @@ The application follows a **3-layer architecture**:
    - Calculates totals/percentages
 3. Output:
 
-<img src="../personal-expense-tracker/flowchart_7.png" alt="Application Flowchart 3" width="600"/>
+![Generating reports](../personal-expense-tracker/flowchart_7.png)
 
 <br>
 
@@ -211,7 +192,7 @@ The application follows a **3-layer architecture**:
 
 - **Recovery Flow:**
 
-<img src="../personal-expense-tracker/flowchart_8.png" alt="Application Flowchart 3" width="600"/>
+![Recovery flow](../personal-expense-tracker/flowchart_8.png)
 
 <br>
 
@@ -225,7 +206,7 @@ The application follows a **3-layer architecture**:
 2. *ExpenseManager* → Validates amount/category
 3. *DataHandler* → Saves to JSON:
 
-<img src="../personal-expense-tracker/flowchart_9.png" alt="Application Flowchart 3" width="600"/>
+![Scenario](../personal-expense-tracker/flowchart_9.png)
 
 <br>
 
@@ -235,37 +216,37 @@ The application follows a **3-layer architecture**:
 
 **MAIN SCREEN**
 
-<img src="../personal-expense-tracker/ss_main.png" alt="Application Flowchart 3" width="600"/>
+![Main screen](../personal-expense-tracker/ss_main.png)
 
 <br>
 
 **NEW EXPENSE ADDED**
 
-<img src="../personal-expense-tracker/ss_new_expense_added.png" alt="Application Flowchart 3" width="600"/>
+![New expense](../personal-expense-tracker/ss_new_expense_added.png)
 
 <br>
 
 **CATEGORIES**
 
-<img src="../personal-expense-tracker/ss_categories.png" alt="Application Flowchart 3" width="600"/>
+![Categories](../personal-expense-tracker/ss_categories.png)
 
 <br>
 
 **SPENDING SUMMARY**
 
-<img src="../personal-expense-tracker/ss_spending_summary.png" alt="Application Flowchart 3" width="600"/>
+![Summary](../personal-expense-tracker/ss_spending_summary.png)
 
 <br>
 
 **TOTAL SPENDING**
 
-<img src="../personal-expense-tracker/ss_total_spending.png" alt="Application Flowchart 3" width="600"/>
+![Total](../personal-expense-tracker/ss_total_spending.png)
 
 <br>
 
 **EXIT**
 
-<img src="../personal-expense-tracker/ss_exit.png" alt="Application Flowchart 3" width="600"/>
+![Exit](../personal-expense-tracker/ss_exit.png)
 
 <br>
 
