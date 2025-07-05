@@ -81,9 +81,9 @@ class ExpenseTrackerApp:
             if not description:
                 description = "No description"
             # Add the expenses
-                success = self.expense_manager.add_expense(
-                    amount, category, description
-                )
+            success = self.expense_manager.add_expense(
+                amount, category, description
+            )
 
             if success:
                 print("\n✓ Expense added successfully!")
