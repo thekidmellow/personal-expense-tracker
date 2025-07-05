@@ -89,7 +89,7 @@ The application follows a **3-layer architecture**:
 
 - Menu System
 
-![Menu system](../personal-expense-tracker/flowchart_2.png)
+![Menu system](/img/flowchart_2.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;∘ **Paths:**
   1. **Add Expense**: Collects amount, category, description  
@@ -106,7 +106,7 @@ The application follows a **3-layer architecture**:
 
 - **Core Functions:**
 
-![Core functions](../personal-expense-tracker/flowchart_3.png)
+![Core functions](/img/flowchart_3.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;∘ **Validation:**
   - Checks amount > 0
@@ -127,7 +127,7 @@ The application follows a **3-layer architecture**:
 
 - **File Operations:**
 
-![File operations](../personal-expense-tracker/flowchart_4.png)
+![File operations](/img/flowchart_4.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;∘ **Auto-Creation:** Makes expenses.json if missing
 
@@ -151,7 +151,7 @@ The application follows a **3-layer architecture**:
 
 3. *ExpenseManager* creates expense object with:
 
-![Expense manager](../personal-expense-tracker/flowchart_5.png)
+![Expense manager](/img/flowchart_5.png)
 
 4. *DataHandler* appends to *expenses.json*
 
@@ -162,7 +162,7 @@ The application follows a **3-layer architecture**:
    - Loads data from JSON
    - Formats as table:
 
-   ![Viewing expenses](../personal-expense-tracker/flowchart_6.png)
+   ![Viewing expenses](/img/flowchart_6.png)
 
    &nbsp;&nbsp;&nbsp;&nbsp;∘ Displays total at bottom
 
@@ -174,7 +174,7 @@ The application follows a **3-layer architecture**:
    - Calculates totals/percentages
 3. Output:
 
-![Generating reports](../personal-expense-tracker/flowchart_7.png)
+![Generating reports](/img/flowchart_7.png)
 
 <br>
 
@@ -192,7 +192,7 @@ The application follows a **3-layer architecture**:
 
 - **Recovery Flow:**
 
-![Recovery flow](../personal-expense-tracker/flowchart_8.png)
+![Recovery flow](/img/flowchart_8.png)
 
 <br>
 
@@ -206,7 +206,7 @@ The application follows a **3-layer architecture**:
 2. *ExpenseManager* → Validates amount/category
 3. *DataHandler* → Saves to JSON:
 
-![Scenario](../personal-expense-tracker/flowchart_9.png)
+![Scenario](/img/flowchart_9.png)
 
 <br>
 
@@ -216,37 +216,37 @@ The application follows a **3-layer architecture**:
 
 **MAIN SCREEN**
 
-![Main screen](../personal-expense-tracker/ss_main.png)
+![Main screen](/img/ss_main.png)
 
 <br>
 
 **NEW EXPENSE ADDED**
 
-![New expense](../personal-expense-tracker/ss_new_expense_added.png)
+![New expense](/img/ss_new_expense_added.png)
 
 <br>
 
 **CATEGORIES**
 
-![Categories](../personal-expense-tracker/ss_categories.png)
+![Categories](/img/ss_categories.png)
 
 <br>
 
 **SPENDING SUMMARY**
 
-![Summary](../personal-expense-tracker/ss_spending_summary.png)
+![Summary](/img/ss_spending_summary.png)
 
 <br>
 
 **TOTAL SPENDING**
 
-![Total](../personal-expense-tracker/ss_total_spending.png)
+![Total](/img/ss_total_spending.png)
 
 <br>
 
 **EXIT**
 
-![Exit](../personal-expense-tracker/ss_exit.png)
+![Exit](/img/ss_exit.png)
 
 <br>
 
