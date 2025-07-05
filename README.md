@@ -60,7 +60,7 @@ personal-expense-tracker/
 
 ## **Application Flowchart** 📈
 
-![Application Flowchart](../personal-expense-tracker/flowchart_1.png)
+![Application Flowchart](/personal-expense-tracker/flowchart_1.png)
 
 <br>
 
@@ -151,7 +151,7 @@ The application follows a **3-layer architecture**:
 
 3. *ExpenseManager* creates expense object with:
 
-![Expense manager](/personal-expense-tracker/flowchart_5.png)
+![Expense manager](../personal-expense-tracker/flowchart_5.png)
 
 4. *DataHandler* appends to *expenses.json*
 
