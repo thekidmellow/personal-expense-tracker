@@ -392,15 +392,15 @@ run.py: Passed
 
 run.py
 
-![run.py](/personal-expense-tracker/img/codechecker_1.png)
+![run.py](/img/codechecker_1.png)
 
 expense_manager.py
 
-![expense_manager.py](/personal-expense-tracker/img/codechecker_2.png)
+![expense_manager.py](/img/codechecker_2.png)
 
 data_handler.py
 
-![data_handler.py](/personal-expense-tracker/img/codechecker_3.png)
+![data_handler.py](/img/codechecker_3.png)
 
 **Manual Testing**
 
@@ -420,7 +420,7 @@ data_handler.py
 
 **Screenshots**
 
-See [TESTING.md](/personal-expense-tracker/TESTING.md) file
+See [TESTING.md](/TESTING.md) file
 
 <br>
 
