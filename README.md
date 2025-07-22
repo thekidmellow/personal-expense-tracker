@@ -310,6 +310,97 @@ The application follows a **3-layer architecture**:
 
 <br>
 
+## **Deployment** 🚀
+
+<br>
+
+### **Local Setup**
+
+To run this application locally:
+
+1. **Clone the repository:**
+
+``` bash
+git clone https://github.com/thekidmellow/personal-expense-tracker.git
+```
+
+2. **Create a virtual environment (optional but recommended):**
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+3. **Install dependencies:**
+```bash
+pip install -r requirements.txt
+```
+
+4. **Run the app:**
+```bash
+python run.py
+```
+
+### **Heroku Deployment** ☁️
+
+To deploy on Heroku:
+
+1. **Ensure these files exist in your project:**
+
+- `run.py`
+- `requirements.txt`
+- `Procfile`
+- `expenses.json`
+
+2. **Install Heroku CLI and login:**
+
+```bash
+heroku login
+````
+
+3. **Create Heroku app:**
+
+```bash
+heroku create expense-tracker-david
+```
+
+4. **Push code to Heroku:**
+
+```bash
+git push heroku main
+```
+
+5. **Open the deployed app:**
+
+```bash
+heroku logs --tail
+```
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## **Learning Outcomes** 📚
 
 - Implements algorithms for data management and calculations
