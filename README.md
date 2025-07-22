@@ -318,22 +318,25 @@ To run this application locally:
 
 1. **Clone the repository:**
 
-``` bash
+```bash
 git clone https://github.com/thekidmellow/personal-expense-tracker.git
 ```
 
 2. **Create a virtual environment (optional but recommended):**
+
 ```bash
 python -m venv venv
 source venv/bin/activate
 ```
 
 3. **Install dependencies:**
+
 ```bash
 pip install -r requirements.txt
 ```
 
 4. **Run the app:**
+
 ```bash
 python run.py
 ```
@@ -353,7 +356,7 @@ To deploy on Heroku:
 
 ```bash
 heroku login
-````
+```
 
 3. **Create Heroku app:**
 
@@ -375,11 +378,11 @@ heroku logs --tail
 
 <br>
 
-## **Testing** ✅ 
+## **Testing** ✅
 
 **Code Validator**
 
-- All Python files passed PEP8 validation using the [PEP8 CI Python Linter.](https://https://pep8ci.herokuapp.com/)
+- All Python files passed PEP8 validation using the [PEP8 CI Python Linter.](https://pep8ci.herokuapp.com/)
 
 - No warnings or errors were found.
 
@@ -387,7 +390,8 @@ heroku logs --tail
 expense_manager.py: Passed
 data_handler.py: Passed
 run.py: Passed
-````
+```
+
 **Screenshots:**
 
 run.py
@@ -406,15 +410,15 @@ data_handler.py
 
 ---
 
-| Feature              | Test Description                                        | Expected Outcome                                  | Actual Outcome | Pass/Fail |
-|----------------------|----------------------------------------------------------|--------------------------------------------------|----------------|-----------|
-| Add Expense          | Input valid expense                                      | Saved to JSON                                    | As expected    | ✅ Pass   |
-| Add Invalid Expense  | Negative amount input                                    | Shows error, re-prompts                          | As expected    | ✅ Pass   |
-| View Expenses        | View all saved data                                      | Displayed in tabular format                      | As expected    | ✅ Pass   |
-| Filter by Category   | Filter by "Food"                                         | Shows only "Food" category                       | As expected    | ✅ Pass   |
-| Spending Summary     | Totals by category                                       | Accurate and formatted display                   | As expected    | ✅ Pass   |
-| File Error Handling  | Corrupt or missing JSON                                  | App recovers and creates new file                | As expected    | ✅ Pass   |
-| Exit Functionality   | Choose exit from menu                                    | Exits cleanly without errors                     | As expected    | ✅ Pass   |
+| Feature             | Test Description        | Expected Outcome                  | Actual Outcome | Pass/Fail |
+| ------------------- | ----------------------- | --------------------------------- | -------------- | --------- |
+| Add Expense         | Input valid expense     | Saved to JSON                     | As expected    | ✅ Pass   |
+| Add Invalid Expense | Negative amount input   | Shows error, re-prompts           | As expected    | ✅ Pass   |
+| View Expenses       | View all saved data     | Displayed in tabular format       | As expected    | ✅ Pass   |
+| Filter by Category  | Filter by "Food"        | Shows only "Food" category        | As expected    | ✅ Pass   |
+| Spending Summary    | Totals by category      | Accurate and formatted display    | As expected    | ✅ Pass   |
+| File Error Handling | Corrupt or missing JSON | App recovers and creates new file | As expected    | ✅ Pass   |
+| Exit Functionality  | Choose exit from menu   | Exits cleanly without errors      | As expected    | ✅ Pass   |
 
 ---
 
