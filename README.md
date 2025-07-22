@@ -312,8 +312,6 @@ The application follows a **3-layer architecture**:
 
 ## **Deployment** 🚀
 
-<br>
-
 ### **Local Setup**
 
 To run this application locally:
@@ -394,15 +392,15 @@ run.py: Passed
 
 run.py
 
-![run.py](../personal-expense-tracker/img/codechecker_1.png)
+![run.py](/personal-expense-tracker/img/codechecker_1.png)
 
 expense_manager.py
 
-![expense_manager.py](../personal-expense-tracker/img/codechecker_2.png)
+![expense_manager.py](/personal-expense-tracker/img/codechecker_2.png)
 
 data_handler.py
 
-![data_handler.py](../personal-expense-tracker/img/codechecker_3.png)
+![data_handler.py](/personal-expense-tracker/img/codechecker_3.png)
 
 **Manual Testing**
 
@@ -422,7 +420,7 @@ data_handler.py
 
 **Screenshots**
 
-See [TESTING.md](../personal-expense-tracker/TESTING.md) file
+See [TESTING.md](/personal-expense-tracker/TESTING.md) file
 
 <br>
 
