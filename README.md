@@ -408,7 +408,7 @@ data_handler.py
 
 **Manual Testing**
 
----
+
 
 | Feature             | Test Description        | Expected Outcome                  | Actual Outcome | Pass/Fail |
 | ------------------- | ----------------------- | --------------------------------- | -------------- | --------- |
@@ -420,7 +420,7 @@ data_handler.py
 | File Error Handling | Corrupt or missing JSON | App recovers and creates new file | As expected    | ✅ Pass   |
 | Exit Functionality  | Choose exit from menu   | Exits cleanly without errors      | As expected    | ✅ Pass   |
 
----
+
 
 **Screenshots**
 
